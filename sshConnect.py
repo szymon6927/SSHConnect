@@ -6,7 +6,7 @@ class ssh:
     transport = None
  
     def __init__(self, address, username, password):
-        print("Łączenie z serwerem", str(address) + ".")
+        print("Connect to server", str(address) + ".")
         self.client = paramiko.client.SSHClient()
         self.client.set_missing_host_key_policy(paramiko.client.AutoAddPolicy())
         self.client.connect(address, username=username, password=password, look_for_keys=False)
